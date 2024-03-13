@@ -1,0 +1,36 @@
+<.flash_group flash={@flash} />
+
+<%!-- Header Section --%>
+<header id="header" class="relative p-5 z-50">
+  <div class="flex justify-between">
+    <.link patch="/">
+      <img
+        class="w-12 drop-shadow-lg"
+        src="https://s.static.cebuamradio.com/assets/CMAR_LOGO_WHITE.svg"
+        alt=""
+        srcset=""
+      />
+    </.link>
+    <div class="text-shadow-10 flex space-x-5 pt-2">
+      <div>
+        <.link patch="/">RADIO</.link>
+      </div>
+      <div>
+        <.link patch="/schedule">SCHEDULE</.link>
+      </div>
+      <div>
+        <.link patch="/about">ABOUT</.link>
+      </div>
+      <div class="hidden lg:block">
+        <%!-- fixes the reload issue on click --%>
+        <span class="cursor-pointer" onclick="window.open('https://grapql-doc.cebuamradio.com/welcome', '_blank_graphql_doc').focus()">API</span>
+      </div>
+    </div>
+    <div class="pr-1 h-5 md:hidden"></div>
+  </div>
+</header>
+
+<%= @inner_content %>
+
+<%!-- Footer --%>
+<footer></footer>

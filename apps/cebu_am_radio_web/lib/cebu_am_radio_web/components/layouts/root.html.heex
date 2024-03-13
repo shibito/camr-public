@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" class="[scrollbar-gutter:stable]">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="csrf-token" content={get_csrf_token()} />
+    <.live_title suffix=" · CebuAMRadio">
+      <%= assigns[:page_title] || "CEBUAMRADIO" %>
+    </.live_title>
+    <link phx-track-static rel="stylesheet" href={~p"/assets/app.css"} />
+    <script defer phx-track-static type="text/javascript" src={~p"/assets/app.js"}>
+    </script>
+  </head>
+  <body class="bg-gradient-to-b from-slate-600 to-slate-800 text-white relative antialiased h-screen overflow-hidden">
+    <%!-- <body class="bg-slate-700 text-white relative antialiased h-screen"> --%>
+    <%!-- style="background-image: radial-gradient(#334155, #1e293b, #020617);" --%>
+    <%= @inner_content %>
+  </body>
+</html>
